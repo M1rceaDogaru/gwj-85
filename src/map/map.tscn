@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6nuftu1rtbou"]
+[gd_scene load_steps=3 format=3 uid="uid://c6nuftu1rtbou"]
 
 [ext_resource type="PackedScene" uid="uid://cfsduhoujq6ec" path="res://player/player.tscn" id="1_hgrid"]
+[ext_resource type="Script" uid="uid://bt37k3uhc2mnj" path="res://map/enemies.gd" id="2_a0dt8"]
 
 [node name="Map" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hgrid")]
 position = Vector2(911, 593)
+
+[node name="Enemies" type="Node2D" parent="." node_paths=PackedStringArray("spawn_area")]
+script = ExtResource("2_a0dt8")
+spawn_area = NodePath("../Player")
