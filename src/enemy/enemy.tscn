@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://6gsojm6g0v3m"]
 
-[ext_resource type="Texture2D" uid="uid://bnjpj4e2pjxk4" path="res://icon.svg" id="1_2mvqj"]
 [ext_resource type="Script" uid="uid://c6opshge6lv53" path="res://enemy/enemy.gd" id="1_ofsxj"]
+[ext_resource type="Texture2D" uid="uid://bbwtjhc2nxngt" path="res://sprites/tilesheet.png" id="2_ofsxj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofsxj"]
-radius = 33.24154
+radius = 5.0990195
 
 [node name="Enemy" type="Area2D"]
 collision_layer = 2
@@ -13,7 +13,9 @@ script = ExtResource("1_ofsxj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.99999994, 0.20140278, 0.24078491, 1)
-texture = ExtResource("1_2mvqj")
+texture = ExtResource("2_ofsxj")
+region_enabled = true
+region_rect = Rect2(416, 128, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ofsxj")

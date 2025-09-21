@@ -7,6 +7,10 @@
 
 [node name="Player" parent="." instance=ExtResource("1_hgrid")]
 position = Vector2(911, 593)
+move_speed = 200.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
 
 [node name="Enemies" type="Node2D" parent="." node_paths=PackedStringArray("spawn_area")]
 script = ExtResource("2_a0dt8")

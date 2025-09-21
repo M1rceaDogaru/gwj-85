@@ -24,7 +24,7 @@ func handle_movement(delta: float) -> void:
 		position += velocity.normalized() * move_speed * delta
 
 func take_damage(amount: int) -> void:
-	hp -= amount
+	#hp -= amount
 	if hp <= 0:
 		died.emit()
 		queue_free()
